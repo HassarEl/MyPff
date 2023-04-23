@@ -33,27 +33,11 @@
 
     <div class="card">
       <div class="card-header">
-        <h2 class="card-title">Jardin</h2>
+        <h2 class="card-title">Jardinier</h2>
       </div>
 
       <div class="card-body p-0">
-        <table class="table table-striped projects">
-            <thead>
-                <tr align="center">
-                    <th>
-                        jardinier
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-
-                
-                <tr>
-                    <td></td>
-                </tr>
-                
-            </tbody>
-        </table>
+        <h2 class="text-header">Name Jardinier Connecter : {{auth()->user()->name}}</h2>
       </div>
 
     </div>
