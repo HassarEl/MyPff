@@ -8,14 +8,28 @@ use Illuminate\Foundation\Auth\User;
 
 class JardinController extends Controller
 {
+
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
-    {   $jardins = Jardin::all();
-        return view('jardin.index', compact('jardins'));
+    {
+        $users= User::all();
+        $jardins = Jardin::all();
+        return view('jardin.index', compact('jardins', 'users'));
     }
+
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
         return view('jardin.create');
     }
+
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(Request $request)
     {
         $jardin = new Jardin();
@@ -35,6 +49,43 @@ class JardinController extends Controller
         $jardin->save();
 
         return redirect('jardin')->with('message', 'Jardin Has Been Added Seccessfuly');
+    }
+
+    /**
+     
+    *@param  \App\Models\Jardin $jardin
+    *@return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        $users= User::all();
+        $jardin = Jardin::find($id);
+
+        return view('jardin.show', compact('users'))->with('jardins', $jardin);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(string $id)
+    {
+        //
     }
 }
 

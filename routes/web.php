@@ -35,6 +35,7 @@ require __DIR__.'/auth.php';
 Route::get('/jardin', [JardinController::class, 'index'])->name('jardin');
 Route::get('/jardin/create', [JardinController::class, 'create'])->name('jardin.create');
 Route::post('/jardin/store', [JardinController::class, 'store'])->name('jardin.store');
+Route::get('/jardin/{id}', [JardinController::class, 'show'])->name('jardin.show');
 
 // Route Jardinier
 Route::get('/jardinier',function(){

@@ -87,11 +87,15 @@
                     <td>
                         {{$jardin->superficie}}
                     </td>
-                    <td>
-                        {{auth()->user()->name}}
+                    <td> 
+                        @foreach($users as $user)
+                            @if($user->id == $jardin->user_id)
+                                {{$name_jardinier = $user->name}}
+                            @endif
+                        @endforeach
                     </td>
                     <td class="project-actions text-center">
-                        <a  class="btn btn-primary btn-sm" href="">
+                        <a  class="btn btn-primary btn-sm" href="{{ url('/jardin/' . $jardin->id) }}">
                             <i class="fa fa-eye"></i>
                             voir
                         </a>

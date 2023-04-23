@@ -8,7 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Jardin extends Model
 {
     use HasFactory;
-    
+    protected $table = 'jardins';
+
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'NumJ',
         'nomJardin',
