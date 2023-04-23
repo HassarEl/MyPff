@@ -37,7 +37,18 @@
       </div>
 
       <div class="card-body p-0">
-        <h2 class="text-header">Name Jardinier Connecter : {{auth()->user()->name}}</h2>
+        <h2 class="text-header">Name Jardinier Connecter : <span class="badge text-bg-dark">{{auth()->user()->name}}</span></h2>
+
+        <h3 class="text-header">Date D'embauche : 
+            <span class="badge text-bg-dark">
+                @foreach($jardiniers as $jardinier)
+                    @if($jardinier->id == auth()->user()->id )
+                            {{$date_jardinier = $jardinier->date_embauche}}
+                    @endif
+                @endforeach
+            </span>
+        </h3>
+        
       </div>
 
     </div>
