@@ -13,7 +13,7 @@
 @endsection
 
 @section('title_page1')
-    
+    <a class="btn btn-outline-secondary" href="{{url('/')}}">Home</a>
 @endsection
 
 @section('title_page2')
@@ -31,7 +31,7 @@
 </div>
 <section class="content pl-5 pr-5">
 
-    <div class="card">
+    <div class="card text-center">
       <div class="card-header">
         <h2 class="card-title">Jardinier</h2>
       </div>
@@ -48,7 +48,7 @@
                 @endforeach
             </span>
         </h3>
-        
+
       </div>
 
     </div>
