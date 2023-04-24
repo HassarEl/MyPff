@@ -32,22 +32,22 @@
               </p>
             </a>
           </li>
-          {{-- Jardinier --}}
+          {{-- Jardin --}}
           <li class="nav-item">
             <a href="{{route('jardin')}}" class="nav-link">
               <i class="bi bi-person"></i>
               <p>
-                Jardinier
+                Jardin
                 <span style="font-size: 0.-em;" class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
-          {{-- Jardin --}}
+          {{-- Jardinier --}}
           <li class="nav-item">
             <a href="{{route('jardinier')}}" class="nav-link">
               <i class="bi bi-bounding-box-circles"></i>
               <p>
-                Jardin
+                Jardinier
               </p>
             </a>
           </li>
