@@ -32,7 +32,7 @@
 </div>
 <section class="content pl-5 pr-5">
 
-    <div class="card">
+    <div class="card text-center">
       <div class="card-header">
         <h2 class="card-title">Jardinier</h2>
       </div>
