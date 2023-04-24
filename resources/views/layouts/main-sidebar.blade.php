@@ -53,7 +53,7 @@
           </li>
           {{-- Plante --}}
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{url('plante')}}" class="nav-link">
               <i class="bi bi-flower3"></i>
               <p>
                 Plante

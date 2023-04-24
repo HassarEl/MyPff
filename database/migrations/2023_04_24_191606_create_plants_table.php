@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('plants', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('origin')->nullable();
+            $table->decimal('price', 9, 3)->default(0);
             $table->timestamps();
         });
     }

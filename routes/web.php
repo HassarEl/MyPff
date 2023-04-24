@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PlantController;
 use App\Http\Controllers\JardinController;
 use App\Http\Controllers\ProfileController;
 
@@ -37,6 +38,9 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/jardin/create', [JardinController::class, 'create'])->name('jardin.create');
     Route::post('/jardin/store', [JardinController::class, 'store'])->name('jardin.store');
     Route::get('/jardin/{id}', [JardinController::class, 'show'])->name('jardin.show');
+
+    //Route Plante
+    Route::resource('plante', PlantController::class);
 });
 
 require __DIR__.'/auth.php';
