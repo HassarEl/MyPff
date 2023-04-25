@@ -78,8 +78,22 @@
                     <td>
                         {{$plante->price}}
                     </td>
-                    <td>
+                    <td class="project-actions text-center">
+                        <a  class="btn btn-primary btn-sm" href="#">
+                            <i class="fa fa-eye"></i>
+                            voir
+                        </a>
+                        <a class="btn btn-info btn-sm" href="">
+                            <i class="fas fa-pencil-alt"></i>
+                            Modifier
+                        </a>
 
+                        <form method="POST" action="" accept-charset="UTF-8" style="display:inline">
+                            {{ method_field('DELETE') }}
+                            {{ csrf_field() }}
+                            <button type="submit" class="btn btn-danger btn-sm" title="Delete Doctor" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
+                        </form>
+                
                     </td>
                 </tr>
                 @endforeach

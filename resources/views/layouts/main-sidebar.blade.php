@@ -32,6 +32,7 @@
               </p>
             </a>
           </li>
+          @can('isAdmin')
           {{-- Jardinier --}}
           <li class="nav-item">
             <a href="{{route('jardinier')}}" class="nav-link">
@@ -41,6 +42,7 @@
               </p>
             </a>
           </li>
+          @endcan
           {{-- Jardin --}}
           <li class="nav-item">
             <a href="{{route('jardin')}}" class="nav-link">
