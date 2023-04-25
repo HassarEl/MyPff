@@ -32,25 +32,26 @@
               </p>
             </a>
           </li>
+          {{-- Jardinier --}}
+          <li class="nav-item">
+            <a href="{{route('jardinier')}}" class="nav-link">
+              <i class="bi bi-person"></i>
+              <p>
+                Jardinier
+              </p>
+            </a>
+          </li>
           {{-- Jardin --}}
           <li class="nav-item">
             <a href="{{route('jardin')}}" class="nav-link">
-              <i class="bi bi-person"></i>
+              <i class="bi bi-bounding-box-circles"></i>
               <p>
                 Jardin
                 <span style="font-size: 0.-em;" class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
-          {{-- Jardinier --}}
-          <li class="nav-item">
-            <a href="{{route('jardinier')}}" class="nav-link">
-              <i class="bi bi-bounding-box-circles"></i>
-              <p>
-                Jardinier
-              </p>
-            </a>
-          </li>
+          
           {{-- Plante --}}
           <li class="nav-item">
             <a href="{{url('plante')}}" class="nav-link">
