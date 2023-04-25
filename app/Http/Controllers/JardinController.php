@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Jardin;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Support\Facades\Auth;
 
 class JardinController extends Controller
 {
@@ -49,7 +50,12 @@ class JardinController extends Controller
         $jardin->user_id=auth()->user()->id;
         $jardin->save();
 
-        return redirect('jardin')->with('message', 'Jardin Has Been Added Seccessfuly');
+        if(Auth::user()->profil == 'admin'){
+            return redirect('jardin')->with('message', 'Jardin Has Been Added Seccessfuly');
+        }
+        else{
+            return redirect('vosJardin')->with('message', 'Jardin Has Been Added Seccessfuly');
+        }
     }
 
     /**
@@ -84,9 +90,10 @@ class JardinController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        Jardin::destroy($id);
+        return redirect('jardin')->with('message', 'Jardin Has Been Deleted');
     }
 
 }

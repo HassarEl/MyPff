@@ -39,6 +39,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/jardin/create', [JardinController::class, 'create'])->name('jardin.create');
     Route::post('/jardin/store', [JardinController::class, 'store'])->name('jardin.store');
     Route::get('/jardin/{id}', [JardinController::class, 'show'])->name('jardin.show');
+    Route::delete('/jardin/{id}', [JardinController::class, 'destroy'])->name('jardin.delete');
 
     // Route Vos Jardin
     Route::get('/vosJardin',[Jardin_connecterController::class , 'jardinier_connecter'])->name('jardin.jardinier_connecter');

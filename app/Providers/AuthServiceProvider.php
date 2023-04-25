@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-// use Illuminate\Support\Facades\Gate;
+
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -29,7 +29,7 @@ class AuthServiceProvider extends ServiceProvider
         });
         Gate::define('Jardinier', function()
         {
-            return auth()->user()->id == auth()->user()->id;
+            return auth()->user()->id != 'admin';
         });
     }
 }
