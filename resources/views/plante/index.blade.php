@@ -83,17 +83,18 @@
                             <i class="fa fa-eye"></i>
                             voir
                         </a>
+                        {{-- only admin can update and delet this --}}
+                        @can('isAdmin')
                         <a class="btn btn-info btn-sm" href="">
                             <i class="fas fa-pencil-alt"></i>
                             Modifier
                         </a>
-
                         <form method="POST" action="" accept-charset="UTF-8" style="display:inline">
                             {{ method_field('DELETE') }}
                             {{ csrf_field() }}
                             <button type="submit" class="btn btn-danger btn-sm" title="Delete Doctor" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                         </form>
-                
+                        @endcan
                     </td>
                 </tr>
                 @endforeach

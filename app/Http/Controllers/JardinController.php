@@ -16,8 +16,9 @@ class JardinController extends Controller
     {
         $users= User::all();
         $jardins = Jardin::all();
-        return view('jardin.index', compact('jardins', 'users'));;
+        return view('jardin.index', compact('jardins', 'users'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -87,5 +88,6 @@ class JardinController extends Controller
     {
         //
     }
+
 }
 

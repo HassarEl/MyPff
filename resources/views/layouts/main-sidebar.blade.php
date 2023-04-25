@@ -42,7 +42,8 @@
               </p>
             </a>
           </li>
-          @endcan
+          
+          
           {{-- Jardin --}}
           <li class="nav-item">
             <a href="{{route('jardin')}}" class="nav-link">
@@ -50,6 +51,17 @@
               <p>
                 Jardin
                 <span style="font-size: 0.-em;" class="right badge badge-danger">New</span>
+              </p>
+            </a>
+          </li>
+          @endcan
+          
+          {{-- Jardin --}}
+          <li class="nav-item">
+            <a href="{{route('jardin.jardinier_connecter')}}" class="nav-link">
+              <i class="bi bi-bounding-box-circles"></i>
+              <p>
+                Vos Jardin
               </p>
             </a>
           </li>

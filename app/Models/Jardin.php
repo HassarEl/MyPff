@@ -22,6 +22,6 @@ class Jardin extends Model
     ];
     public function user()
     {
-        return $this->belongsTo(Usser::class);
+        return $this->belongsTo(User::class);
     }
 }
