@@ -45,9 +45,10 @@ class PlantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Plant $plant)
+    public function show($id)
     {
-        //
+        $plante = Plant::find($id);
+        return view('plante.show')->with('plante', $plante);
     }
 
     /**

@@ -13,7 +13,7 @@
 @endsection
 
 @section('title_page1')
-    <a class="btn btn-outline-secondary" href="{{url('/')}}">Home</a>
+    <a class="btn btn-outline-secondary" href="{{url('/dashboard')}}">Home</a>
 @endsection
 
 @section('title_page2')
@@ -79,7 +79,7 @@
                         {{$plante->price}}
                     </td>
                     <td class="project-actions text-center">
-                        <a  class="btn btn-primary btn-sm" href="#">
+                        <a  class="btn btn-primary btn-sm" href="{{url('/plante/' . $plante->id)}}">
                             <i class="fa fa-eye"></i>
                             voir
                         </a>
