@@ -13,7 +13,8 @@ class PlantController extends Controller
      */
     public function index()
     {
-        return view('plante.index');
+        $plantes = Plant::all();
+        return view('plante.index', compact('plantes'));
     }
 
     /**
@@ -21,7 +22,7 @@ class PlantController extends Controller
      */
     public function create()
     {
-        //
+        return view('plante.create');
     }
 
     /**
@@ -29,7 +30,16 @@ class PlantController extends Controller
      */
     public function store(StorePlantRequest $request)
     {
-        //
+        $plante =  new Plant();
+
+        $plante->name = $request->name;
+        $plante->origin = $request->origin;
+        $plante->price = $request->price;
+        
+        $plante->save();
+
+        return redirect('plante')->with('message', 'Plante Has Been Added Seccessful');
+
     }
 
     /**

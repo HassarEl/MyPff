@@ -64,23 +64,25 @@
             </thead>
             <tbody>
 
-                <tr>
+                @foreach ($plantes as $plante)
+                <tr align="center">
                     <td>
-
+                        {{$plante->id}}
                     </td>
                     <td>
-
+                        {{$plante->name}}
                     </td>
                     <td>
-
+                        {{$plante->origin}}
                     </td>
                     <td>
-
+                        {{$plante->price}}
                     </td>
                     <td>
 
                     </td>
                 </tr>
+                @endforeach
                 
             </tbody>
         </table>

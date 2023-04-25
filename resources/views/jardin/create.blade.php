@@ -48,14 +48,6 @@
                   <input required type="text" class="form-control" name="nomJardin" id="exampleInputUsername2" placeholder="Nom Jardin">
                 </div>
 
-                  {{-- @if($errors->any())
-                  <ul>
-                    @foreach($errors->all() as $message)
-                      <li>{{$message}}</li>
-                    @endforeach
-                  </ul>
-                  @endif --}}
-
               </div>
               <div class="form-group row">
                 <label for="phone" class="col-sm-3 col-form-label">Address</label>
