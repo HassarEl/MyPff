@@ -102,6 +102,13 @@
             </tbody>
         </table>
       </div>
+      <ul>
+        @foreach($plantes->jardins as $jardin)
+        <li>
+            {{$jardin->ville}}
+        </li>
+        @endforeach
+      </ul>
 
     </div>
 

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Jardin;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Plant extends Model
 {
@@ -18,6 +19,12 @@ class Plant extends Model
         'origin',
         'price',
     ];
+    
+    public function jardins()
+    {
+        return $this->belongsToMany(Jardin::class);
+    }
+    
 
 
 }

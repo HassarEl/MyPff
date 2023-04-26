@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Plant;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Jardin extends Model
 {
@@ -24,4 +25,14 @@ class Jardin extends Model
     {
         return $this->belongsTo(User::class);
     }
+    /* 
+     * The roles that belong to the Jardin
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function plants()
+    {
+        return $this->belongsToMany(Plant::class);
+    }
+    
 }
