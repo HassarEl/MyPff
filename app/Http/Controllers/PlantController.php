@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Plant;
+use App\Models\Jardin;
 use App\Http\Requests\StorePlantRequest;
 use App\Http\Requests\UpdatePlantRequest;
 
@@ -13,8 +14,9 @@ class PlantController extends Controller
      */
     public function index()
     {
+        $jardins = Jardin::all();
         $plantes = Plant::all();
-        return view('plante.index', compact('plantes'));
+        return view('plante.index', compact('plantes', 'jardins'));
     }
 
     /**
