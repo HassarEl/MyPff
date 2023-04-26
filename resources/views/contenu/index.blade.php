@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    
+    Contenu
 @endsection
 
 @section('css')
@@ -9,7 +9,7 @@
 @endsection
 
 @section('title_header')
-
+    Contenu De Jardin
 @endsection
 
 @section('title_page1')

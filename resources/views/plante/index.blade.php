@@ -84,7 +84,6 @@
                     <td>
                         <ul>
                             @foreach($plante->jardins as $jardin)
-                                
                                 <li>{{$jardin->nomJardin}}</li>
                             @endforeach
                         </ul>
