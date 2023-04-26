@@ -58,6 +58,9 @@
                         Prix
                     </th>
                     <th>
+                        Jardin
+                    </th>
+                    <th>
                         Acction
                     </th>
                 </tr>
@@ -77,6 +80,14 @@
                     </td>
                     <td>
                         {{$plante->price}}
+                    </td>
+                    <td>
+                        <ul>
+                            @foreach($plante->jardins as $jardin)
+                                
+                                <li>{{$jardin->nomJardin}}</li>
+                            @endforeach
+                        </ul>
                     </td>
                     <td class="project-actions text-center">
                         <a  class="btn btn-primary btn-sm" href="{{url('/plante/' . $plante->id)}}">
@@ -99,6 +110,7 @@
                 </tr>
                 @endforeach
                 
+
             </tbody>
         </table>
       </div>

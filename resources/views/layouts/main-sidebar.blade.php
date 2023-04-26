@@ -77,7 +77,7 @@
           </li>
           {{-- Contenu --}}
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('contenu.index')}}" class="nav-link">
               <i class="bi bi-box-seam"></i>
               <p>
                 Contenu

@@ -14,9 +14,9 @@ class PlantController extends Controller
      */
     public function index()
     {
-        $jardins = Jardin::all();
-        $plantes = Plant::all();
-        return view('plante.index', compact('plantes', 'jardins'));
+        $plantes = Plant::with('jardins')->get();
+        // dd($plantes[0]->jardins);
+        return view('plante.index', compact('plantes'));
     }
 
     /**

@@ -22,7 +22,7 @@ class Plant extends Model
     
     public function jardins()
     {
-        return $this->belongsToMany(Jardin::class);
+        return $this->belongsToMany(Jardin::class, 'plant_jardin', 'plant_id');
     }
     
 

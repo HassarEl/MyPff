@@ -1,11 +1,13 @@
 <?php
 
 use App\Models\User;
+use App\Models\Plant;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlantController;
 use App\Http\Controllers\JardinController;
-use App\Http\Controllers\Jardin_connecterController;
+use App\Http\Controllers\ContenuController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Jardin_connecterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +49,10 @@ Route::middleware('auth', 'verified')->group(function () {
 
     //Route Plante
     Route::resource('plante', PlantController::class);
+
+    //Route Contenu
+    Route::get('/contenu', [ContenuController::class,'index'])->name('contenu.index');
+
 });
 
 require __DIR__.'/auth.php';
@@ -58,3 +64,10 @@ Route::get('/jardinier',function(){
     $jardiniers = User::all();
     return view('jardinier.index', compact('jardiniers'));
 })->name('jardinier');
+
+
+
+
+// Route::get('/test', function(){
+//     dd(Plant::find(2)->jardins()->attach(3, ['quantité' => 9, 'date_plantation'=> '2023-03-15']));
+// });
