@@ -94,6 +94,7 @@ class JardinController extends Controller
     public function destroy($id)
     {
         Jardin::destroy($id);
+        
         return redirect('jardin')->with('message', 'Jardin Has Been Deleted');
     }
 
