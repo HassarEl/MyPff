@@ -52,6 +52,7 @@ Route::middleware('auth', 'verified')->group(function () {
 
     //Route Contenu
     Route::get('/contenu', [ContenuController::class,'index'])->name('contenu.index');
+    Route::get('/contenu/attach', [ContenuController::class,'attach'])->name('contenu.attach');
 
 });
 

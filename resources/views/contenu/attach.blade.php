@@ -23,12 +23,6 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <a class="btn btn-outline-secondary" href="{{route('contenu.attach')}}">Ajouter</a>
-            </div>
-        </div>
-        <br>
-        <div class="row">
             <div class="card m-0">
                 <div class="card-header">
                   Contenu Jardin Plante
@@ -48,7 +42,7 @@
                         <br>
                         <div class="col-8">
                           <label for="inputPassword4" class="form-label">Composition</label>
-                          <table class="table  table-bordere">
+                          <table class="table">
                             <thead>
                               <tr>
                                 <th>Plante</th>
@@ -70,16 +64,6 @@
                                         </td>
                                         <td>
                                             <input name="quantité" type="text" class="form-control">
-                                        </td>
-                                        <td>
-
-                                            <form method="POST" action="" accept-charset="UTF-8" style="display:inline">
-                                                {{ method_field('DELETE') }}
-                                                {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Doctor" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                                            </form>
-                                            
-                                        </td>
                                         </td>
                                     </tr>
                                 @endforeach
