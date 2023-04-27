@@ -41,11 +41,6 @@
                         @endif
                       @endforeach
                     </h5>
-                    <h5 class="card-text"> Plantes : 
-                        <ul>
-                            
-                        </ul>
-                    </h5>
                 </div>
                   </hr>
                 </div>

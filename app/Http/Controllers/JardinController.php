@@ -67,8 +67,7 @@ class JardinController extends Controller
     public function show($id)
     {
         $users= User::all();
-        // $plantes = Plant::with('jardins')->get();
-        $jardin = Jardin::find($id)->with('plants')->get();
+        $jardin = Jardin::find($id);
 
         return view('jardin.show', compact('users'))->with('jardins', $jardin);
     }
