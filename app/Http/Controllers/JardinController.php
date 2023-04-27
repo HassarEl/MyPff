@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plant;
 use App\Models\Jardin;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\User;
@@ -66,10 +67,9 @@ class JardinController extends Controller
     public function show($id)
     {
         $users= User::all();
-        $plantes = Plant::with('jardins')->get();
         $jardin = Jardin::find($id);
 
-        return view('jardin.show', compact('users','plantes'))->with('jardins', $jardin);
+        return view('jardin.show', compact('users'))->with('jardins', $jardin);
     }
 
     /**
@@ -94,7 +94,7 @@ class JardinController extends Controller
     public function destroy($id)
     {
         Jardin::destroy($id);
-        
+
         return redirect('jardin')->with('message', 'Jardin Has Been Deleted');
     }
 

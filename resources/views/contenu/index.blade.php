@@ -61,19 +61,14 @@
                                 @foreach($plantes as $plante)
                                     <tr>
                                         <td>
-                                            <select class="form-select" name="" id="">
-                                                <option selected>Selection La Plante</option>
-                                            @foreach($plantes as $plante)
-                                            <option value="{{$plante->id}}">{{$plante->name}}</option>
-                                            @endforeach
-                                            </select>
+                                            {{$plante->name}}
                                         </td>
                                         <td>
                                             <input name="quantité" type="text" class="form-control">
                                         </td>
                                         <td align="center">
 
-                                            <form method="POST" action="" accept-charset="UTF-8" style="display:inline">
+                                            <form method="POST" action="" accept-charset="UTF-8" >
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Doctor" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
@@ -115,5 +110,5 @@
 @endsection
 
 @section('scripts')
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 @endsection

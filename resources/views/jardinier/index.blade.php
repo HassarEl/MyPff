@@ -37,7 +37,7 @@
       </div>
 
       <div class="card-body p-0">
-        <h2 class="text-header">Name Jardinier Connecter : <span class="badge text-bg-dark">{{auth()->user()->name}}</span></h2>
+        <h2 class="text-header">Name Admin Connecter : <span class="badge text-bg-dark">{{auth()->user()->name}}</span></h2>
 
         <h3 class="text-header">Date D'embauche : 
             <span class="badge text-bg-dark">
@@ -48,7 +48,49 @@
                 @endforeach
             </span>
         </h3>
+      </div>
 
+    </div>
+    <div class="card-body p-0">
+        <table class="table table-striped projects">
+            <thead>
+                <tr align="center">
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Date D'embouche
+                    </th>
+
+                    <th>
+                        Acction
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach($jard_list as $jard)
+                <tr align="center">
+                    <td>
+                        {{$jard->name}}
+                    </td>
+                    <td>
+                        {{$jard->last_name}}
+                    </td>
+                    <td>
+                        {{$jard->date_embauche}}
+                    </td>
+                    <td>
+                        {{$jard->email}}
+                    </td>
+                </tr>
+                @endforeach   
+                
+            </tbody>
+        </table>
       </div>
 
     </div>

@@ -13,11 +13,11 @@
 @endsection
 
 @section('title_page1')
-    
+<a class="btn btn-outline-secondary" href="{{route('dashboard')}}">Home</a>
 @endsection
 
 @section('title_page2')
-    
+    <a class="btn btn-outline-secondary" href="{{route('contenu.index')}}">Contenu</a>
 @endsection
 
 @section('content')
@@ -54,17 +54,12 @@
                                     
                                       @foreach($plantes as $plante)
                                           <tr>
-                                              <td>
-                                                  <select class="form-select" name="" id="">
-                                                      <option selected>Selection La Plante</option>
-                                                  @foreach($plantes as $plante)
-                                                  <option value="{{$plante->id}}">{{$plante->name}}</option>
-                                                  @endforeach
-                                                  </select>
-                                              </td>
-                                              <td>
-                                                  <input name="quantité" type="text" class="form-control">
-                                              </td>
+                                                <td>
+                                                    {{$plante->name}}
+                                                </td>
+                                                <td>
+                                                    <input name="quantité" type="text" class="form-control">
+                                                </td>
                                           </tr>
                                       @endforeach
                                       

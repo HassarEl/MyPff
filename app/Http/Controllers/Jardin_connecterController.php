@@ -16,4 +16,6 @@ class Jardin_connecterController extends Controller
         
         return view('jardin.connecter', compact('jardins', 'users'));
     }
+
+    
 }
