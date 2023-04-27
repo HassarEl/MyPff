@@ -40,58 +40,52 @@
                           </select>
                         </div>
                         <br>
-                        <div class="col-8">
-                          <label for="inputPassword4" class="form-label">Composition</label>
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th>Plante</th>
-                                <th>Quantite</th>
-                                <th>Acction</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              
-                                @foreach($plantes as $plante)
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="inputPassword4" class="form-label">Composition</label>
+                                <table class="table table-bordere">
+                                  <thead>
                                     <tr>
-                                        <td>
-                                            <select class="form-select" name="" id="">
-                                                <option selected>Selection La Plante</option>
-                                            @foreach($plantes as $plante)
-                                            <option value="{{$plante->id}}">{{$plante->name}}</option>
-                                            @endforeach
-                                            </select>
-                                        </td>
-                                        <td>
-                                            <input name="quantité" type="text" class="form-control">
-                                        </td>
+                                      <th>Plante</th>
+                                      <th>Quantite</th>
                                     </tr>
-                                @endforeach
-                                
-                            </tbody>
-                          </table>
+                                  </thead>
+                                  <tbody>
+                                    
+                                      @foreach($plantes as $plante)
+                                          <tr>
+                                              <td>
+                                                  <select class="form-select" name="" id="">
+                                                      <option selected>Selection La Plante</option>
+                                                  @foreach($plantes as $plante)
+                                                  <option value="{{$plante->id}}">{{$plante->name}}</option>
+                                                  @endforeach
+                                                  </select>
+                                              </td>
+                                              <td>
+                                                  <input name="quantité" type="text" class="form-control">
+                                              </td>
+                                          </tr>
+                                      @endforeach
+                                      
+                                  </tbody>
+                                </table>
+                              </div>
                         </div>
 
                         <br>
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <select class="form-select" name="" id="">
                                 <option selected>Selection La Plante</option>
                                 @foreach($plantes as $plante)
                                     <option value="{{$plante->id}}">{{$plante->name}}</option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
                         
+
                         <div class="col-12">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                              Check me out
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <button type="submit" class="btn btn-primary">Sign in</button>
+                          <button type="submit" class="btn btn-primary">Ajouter</button>
                         </div>
                       </form>
                 </div>

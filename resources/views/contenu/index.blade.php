@@ -13,7 +13,7 @@
 @endsection
 
 @section('title_page1')
-    
+    <a class="btn btn-outline-secondary" href="{{route('dashboard')}}">Home</a>
 @endsection
 
 @section('title_page2')
@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <a class="btn btn-outline-secondary" href="{{route('contenu.attach')}}">Ajouter</a>
+                <a class="btn btn-primary" href="{{route('contenu.attach')}}">Ajouter Plantes</a>
             </div>
         </div>
         <br>
@@ -71,7 +71,7 @@
                                         <td>
                                             <input name="quantité" type="text" class="form-control">
                                         </td>
-                                        <td>
+                                        <td align="center">
 
                                             <form method="POST" action="" accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
@@ -79,7 +79,6 @@
                                                 <button type="submit" class="btn btn-danger btn-sm" title="Delete Doctor" onclick="return confirm('Confirm delete?')"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
                                             </form>
                                             
-                                        </td>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -89,25 +88,24 @@
                         </div>
 
                         <br>
-                        <div class="col-12">
-                            <select class="form-select" name="" id="">
-                                <option selected>Selection La Plante</option>
-                                @foreach($plantes as $plante)
-                                    <option value="{{$plante->id}}">{{$plante->name}}</option>
-                                @endforeach
-                            </select>
+                        <div class="row">
+                            <div class="col-6">
+                                <select class="form-select" name="" id="">
+                                    <option selected>Selection La Plante</option>
+                                    @foreach($plantes as $plante)
+                                        <option value="{{$plante->id}}">{{$plante->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
-                        
-                        <div class="col-12">
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                              Check me out
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-12">
-                          <button type="submit" class="btn btn-primary">Sign in</button>
+                        <br>
+                        <div class="row">
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                            </div>
                         </div>
                       </form>
                 </div>

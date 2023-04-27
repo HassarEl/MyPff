@@ -43,7 +43,6 @@
             </a>
           </li>
           
-          
           {{-- Jardin --}}
           <li class="nav-item">
             <a href="{{route('jardin')}}" class="nav-link">
@@ -75,16 +74,44 @@
               </p>
             </a>
           </li>
-          {{-- Contenu --}}
+    
+          {{-- Dropdown Contenu --}}
+        
           <li class="nav-item">
-            <a href="{{route('contenu.index')}}" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="bi bi-box-seam"></i>
               <p>
                 Contenu
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('contenu.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Contenu De Jardin</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('contenu.attach')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ajouter Contenu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Seppression Contenu</p>
+                </a>
+              </li>
+              {{-- <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Validation</p>
+                </a>
+              </li> --}}
+            </ul>
           </li>
-        
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
