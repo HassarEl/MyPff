@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use App\Models\Plant;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlantController;
 use App\Http\Controllers\JardinController;
@@ -62,8 +63,11 @@ require __DIR__.'/auth.php';
 
 // Route Jardinier
 Route::get('/jardinier',function(){
+    $jard_list = DB::table('users')
+        ->where('profil', 'jardinier')
+        ->get();
     $jardiniers = User::all();
-    return view('jardinier.index', compact('jardiniers'));
+    return view('jardinier.index', compact('jardiniers', 'jard_list'));
 })->name('jardinier');
 
 
