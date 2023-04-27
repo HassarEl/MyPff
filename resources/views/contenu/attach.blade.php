@@ -13,11 +13,11 @@
 @endsection
 
 @section('title_page1')
-    
+<a class="btn btn-outline-secondary" href="{{route('dashboard')}}">Home</a>
 @endsection
 
 @section('title_page2')
-    
+    <a class="btn btn-outline-secondary" href="{{route('contenu.index')}}">Contenu</a>
 @endsection
 
 @section('content')
